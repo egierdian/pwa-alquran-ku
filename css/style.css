@@ -1,0 +1,16 @@
+#preloader {
+	margin-top: 50%;
+}
+
+.card {
+	border-bottom: solid 5px;
+	border-color: grey;
+}
+
+.container {
+	min-height: 550px;
+}
+
+.page-footer {
+	padding-bottom: 10px;
+}

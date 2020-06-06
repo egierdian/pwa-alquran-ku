@@ -1,0 +1,26 @@
+{
+  "name": "Quran-Ku",
+  "short_name": "quran",
+  "description": "Alquran online",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#424242",
+  "theme_color": "#424242",
+  "icons": [
+    {
+      "src": "/images/48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
