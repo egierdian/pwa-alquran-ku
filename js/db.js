@@ -1,6 +1,6 @@
 var dbPromised = idb.open("db-alquran-apps", 1, upgradeDb => {
     var articlesObjectStore = upgradeDb.createObjectStore("alquran", {keyPath: "number"});
-    articlesObjectStore.createIndex("englishName", "englishName", { unique: false });
+    articlesObjectStore.createIndex("name", "name", { unique: false });
 });
 
 function simpanData(data) {

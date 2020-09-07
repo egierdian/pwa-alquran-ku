@@ -43,14 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4) {
                 var content = document.querySelector("#body-content");
-
-                if (page === "home") {
-                    surah();
-                } else if (page === "saved") {
-                    ambilSurahTersimpan();
-                }
-
-
                 if (this.status === 200) {
                     content.innerHTML = xhttp.responseText;
                     surah();
@@ -59,6 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     content.innerHTML = "<p>Ups.. halaman tidak dapat diakses.</p>";
                 }
+
+                
+                if (page === "home") {
+                    surah();
+                } else if (page === "saved") {
+                    ambilSurahTersimpan();
+                }
+
+
+                
             }
         };
         xhttp.open("GET", "pages/" + page + ".html", true);
