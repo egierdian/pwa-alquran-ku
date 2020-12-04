@@ -4,10 +4,10 @@ if ("serviceWorker" in navigator) {
       this.navigator.serviceWorker
       .register("/service-worker.js")
       .then(function() {
-        console.log("Pendaftaran serviceWorker berhasil");
+        // console.log("Pendaftaran serviceWorker berhasil");
       })
       .catch(function() {
-        console.log("Pendaftaran serviceWorker gagal");
+        // console.log("Pendaftaran serviceWorker gagal");
       });
     });
 } else {

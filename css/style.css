@@ -7,10 +7,72 @@
 	border-color: grey;
 }
 
-.container {
-	min-height: 550px;
-}
-
 .page-footer {
 	padding-bottom: 10px;
+}
+
+/* custom-shadow */
+.custom-shadow {
+	box-shadow: 1px 0px 5px 1px rgb(68, 67, 67);
+}
+
+/* nav-custom */
+.custom-nav {
+	height: 90px;
+	padding-top:10px;
+	display: flex;
+	justify-content: center;
+	color: black;
+}
+.sidenav-trigger {
+	padding-top:4px;
+	color: black;
+}
+.btn-white {
+	background-color: white;
+	color: black;
+}
+.custom-nav .container .custom-heading {
+	color: black;
+}
+
+.custom-nav .container .custom-img {
+	width:35px;
+	height: 35px;
+	margin-right: 10px;
+	margin-bottom: -7px;
+}
+
+/* content */
+.custom-content {
+	min-height: 500px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+/* card */
+.custom-card {
+}
+.custom-card a{
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(78, 77, 77);
+}
+.custom-card:hover {
+	background-color: #b4b1b1;
+	transition: 1s;
+}
+
+/* foooter */
+.page-footer{
+	padding: 10px 0px;
+	text-align: center;
+}
+.page-footer .custom-footer {
+	padding: 30px 0px;
+}
+.page-footer .custom-footer .custom-credit {
+	margin: 2px;
+	color: #e4e1e1;
 }
