@@ -4,8 +4,8 @@
   "description": "Alquran online",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#424242",
-  "theme_color": "#424242",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/images/48x48.png",
