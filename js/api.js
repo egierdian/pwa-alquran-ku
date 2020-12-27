@@ -61,7 +61,7 @@ const ambilSurah = data => {
         `;
     });
     // console.log(surah);
-    surahElement.innerHTML = surah;
+    surahElement.innerHTML = surah ;
 };
 
 const surahById = () => {
