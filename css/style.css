@@ -1,10 +1,22 @@
-#preloader {
-	margin-top: 50%;
+@font-face {
+	font-family: "lpmq";
+	src: url(/alamat_font/lpmq.otf) format("opentype");
+	font-display: swap;
+}
+.font-arabic{
+	font-family: "lpmq", Arial, sans-serif;
+	line-height: 2;
 }
 
+#preloader {
+	padding: 50%;
+}
+
+
 .card {
+	margin-bottom: 10px;
 	border-bottom: solid 5px;
-	border-color: grey;
+	border-color: #a5a5a5;
 }
 
 .page-footer {
@@ -13,7 +25,7 @@
 
 /* custom-shadow */
 .custom-shadow {
-	box-shadow: 1px 0px 5px 1px rgb(68, 67, 67);
+	box-shadow: 1px 0px 5px  rgb(173, 173, 173);
 }
 
 /* nav-custom */
@@ -39,7 +51,7 @@
 .custom-nav .container .custom-img {
 	width:35px;
 	height: 35px;
-	margin-right: 10px;
+	margin-right: 2px;
 	margin-bottom: -7px;
 }
 
@@ -53,6 +65,7 @@
 
 /* card */
 .custom-card {
+	border-radius: 15px 2px 15px 2px;
 }
 .custom-card a{
 	text-decoration: none;
@@ -60,7 +73,7 @@
 	color: rgb(78, 77, 77);
 }
 .custom-card:hover {
-	background-color: #b4b1b1;
+	background-color: #dfdddd;
 	transition: 1s;
 }
 

@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "alquran-ku",
-    "o": "al-quran-ku"
+    "o": "al-quran-ku",
+    "al": "al-quran-ku"
   }
 }
