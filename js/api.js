@@ -46,14 +46,17 @@ const ambilSurah = data => {
     let surahElement = document.getElementById("surah");
 
     data.data.forEach(function (ambil) {
-        // console.log(ambil.number);
+        console.log(ambil.name.translation.id);
 
         surah += `
             <div class="col l4 s12 m6">
                 <div class="card custom-shadow custom-card">
                     <a href="./surah.html?id=${ambil.number}">
                         <div class="card-content">
-                            <p>${ambil.number}. <span>${ambil.name.transliteration.id}</span> <span class="badge">${ambil.name.short}</span></p>
+                            <p>${ambil.number}. 
+                                <span>${ambil.name.transliteration.id}</span>
+                                <span class="badge font-arabic" style="font-size:1.3rem;">${ambil.name.short}</span>
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -104,7 +107,7 @@ const ambilSurahById = data => {
             <div class="card custom-shadow">
                 <a class="btn disabled text-white" style="background-color:grey; border-radius:2px;">${hasil.number.inSurah}</a>
                 <div class="card-content" style="margin-top:-10px;">
-                <p class="font-arabic" style="text-align:right; font-size:30px;">${hasil.text.arab}</p>
+                <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
                     <p><i>${hasil.text.transliteration.en}</i></p>
                     <hr>
                     <p>${hasil.translation.id}</p>                
@@ -114,7 +117,7 @@ const ambilSurahById = data => {
     })
     surah = `
         <h5 class="center">Surah ${data.data.name.transliteration.id}</h5>
-        <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px;">
+        <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px 0px 15px 0px;">
         ${detailSurah}
     `;
 
@@ -141,7 +144,10 @@ const ambilSurahTersimpan = () => {
                                     <div class="card custom-shadow custom-card">
                                         <a href="./surah.html?id=${hasil.number}&saved=true" style="font-color: black;">
                                             <div class="card-content">
-                                                <p>${hasil.number}. <span>${hasil.name.transliteration.id}</span> <span class="badge">${hasil.name.short}</span></p>
+                                                <p>${hasil.number}. 
+                                                    <span>${hasil.name.transliteration.id}</span> 
+                                                    <span class="badge font-arabic" style="font-size:1.3rem;">${hasil.name.short}</span>
+                                                </p>
                                             </div>
                                         </a>
                                     </div>
@@ -150,7 +156,7 @@ const ambilSurahTersimpan = () => {
                             });
                             surah = `
                                 <h5 class="center">Surah yang Anda simpan</h5>
-                                <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px;">
+                                <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px 0px 15px 0px;">
                                 ${detailSurah}
                             `;
                             document.getElementById("surahTersimpan").innerHTML = surah;
@@ -173,7 +179,10 @@ const ambilSurahTersimpan = () => {
                     <div class="card custom-shadow custom-card">
                         <a href="./surah.html?id=${hasil.number}&saved=true" style="font-color: black;">
                             <div class="card-content">
-                                <p>${hasil.number}. <span>${hasil.name.transliteration.id}</span> <span class="badge">${hasil.name.short}</span></p>
+                                <p>${hasil.number}. 
+                                    <span>${hasil.name.transliteration.id}</span> 
+                                    <span class="badge font-arabic" style="font-size:1.3rem;">${hasil.name.short}</span>
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -182,7 +191,7 @@ const ambilSurahTersimpan = () => {
                 });
                 surah = `
                 <h5 class="center">Surah yang Anda simpan</h5>
-                <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px;">
+                <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px 0px 15px 0px;">
                 ${detailSurah}
             `;
                 document.getElementById("surahTersimpan").innerHTML = surah;
@@ -209,7 +218,10 @@ const ambilSurahTersimpanById = () => {
                 <div class="card custom-shadow">
                     <a href="./surah.html?id=${ambil.number}&saved=true" style="font-color: black;">
                         <div class="card-content">
-                            <p>${ambil.number}. <span>${ambil.name.transliteration.id}</span> <span class="badge">${ambil.name.short}</span></p>
+                            <p>${ambil.number}. 
+                                <span>${ambil.name.transliteration.id}</span> 
+                                <span class="badge font-arabic" style="font-size:1.3rem;">${ambil.name.short}</span>
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -219,7 +231,7 @@ const ambilSurahTersimpanById = () => {
 
         surah = `
             <h5 class="center">Surah ${data.data.name.transliteration.id}</h5>
-            <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px;">
+            <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px 0px 15px 0px;">
             ${detailSurah}
         `;
 

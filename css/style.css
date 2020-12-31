@@ -69,7 +69,7 @@
 }
 .custom-card a{
 	text-decoration: none;
-	font-weight: bold;
+	/* font-weight: bold; */
 	color: rgb(78, 77, 77);
 }
 .custom-card:hover {
