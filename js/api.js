@@ -46,16 +46,24 @@ const ambilSurah = data => {
     let surahElement = document.getElementById("surah");
 
     data.data.forEach(function (ambil) {
-        console.log(ambil.name.translation.id);
+        // console.log(ambil.name.translation.id);
 
         surah += `
             <div class="col l4 s12 m6">
                 <div class="card custom-shadow custom-card">
                     <a href="./surah.html?id=${ambil.number}">
-                        <div class="card-content">
-                            <p>${ambil.number}. 
-                                <span>${ambil.name.transliteration.id}</span>
-                                <span class="badge font-arabic" style="font-size:1.3rem;">${ambil.name.short}</span>
+                        <div class="card-content" style="margin-left:-10px; margin-right:-10px;">
+                            <button style="background-color:#eeeeee; margin-top: -10px; margin-bottom: 20px; border: none; padding:10px; border-radius: 10px; color:#7579e7; font-weight:700;">
+                                ${ambil.number}
+                            </button>
+                            <button class="right font-arabic transparent" style="background-color:#eeeeee; margin-top: -5px; margin-bottom: 20px; border: none; border-radius: 10px; color:#686d76;">
+                                ${ambil.name.short}
+                            </button>
+                            <p>
+                                <span style="font-size: 1.4rem; font-weight:bold;">${ambil.name.transliteration.id}</span>
+                            </p>
+                            <p class="pt-3">
+                                <span style="font-size: 1rem; font-weight:300; color:#686d76;">${ambil.name.translation.id}</span>
                             </p>
                         </div>
                     </a>
@@ -64,7 +72,7 @@ const ambilSurah = data => {
         `;
     });
     // console.log(surah);
-    surahElement.innerHTML = surah ;
+    surahElement.innerHTML = surah;
 };
 
 const surahById = () => {
@@ -104,8 +112,8 @@ const ambilSurahById = data => {
     data.data.verses.forEach(function (hasil) {
         // console.log(hasil);
         detailSurah += `
-            <div class="card custom-shadow">
-                <a class="btn disabled text-white" style="background-color:grey; border-radius:2px;">${hasil.number.inSurah}</a>
+            <div class="card custom-shadow custom-card">
+                <a class="btn disabled text-white" style="background-color:grey; border-radius:10px 2px 2px 2px; color:#ffffff; font-weight:700;">${hasil.number.inSurah}</a>
                 <div class="card-content" style="margin-top:-10px;">
                 <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
                     <p><i>${hasil.text.transliteration.en}</i></p>
@@ -134,33 +142,37 @@ const ambilSurahTersimpan = () => {
                     ambilSemuaData().then(function (ambil) {
                         let surah = "";
                         let detailSurah = "";
-                        if (!alquran) {
-                            console.log("Kosong")
-                        } else {
-                            alquran.forEach(function (hasil) {
-                                console.log(hasil);
-                                detailSurah += `
+                        alquran.forEach(function (hasil) {
+                            console.log(hasil);
+                            detailSurah += `
                                 <div class="col l4 s12 m6">
                                     <div class="card custom-shadow custom-card">
-                                        <a href="./surah.html?id=${hasil.number}&saved=true" style="font-color: black;">
-                                            <div class="card-content">
-                                                <p>${hasil.number}. 
-                                                    <span>${hasil.name.transliteration.id}</span> 
-                                                    <span class="badge font-arabic" style="font-size:1.3rem;">${hasil.name.short}</span>
+                                        <a href="./surah.html?id=${hasil.number}&saved=true">
+                                            <div class="card-content" style="margin-left:-10px; margin-right:-10px;">
+                                                <button style="background-color:#eeeeee; margin-top: -10px; margin-bottom: 20px; border: none; padding:10px; border-radius: 10px; color:#7579e7; font-weight:700;">
+                                                    ${hasil.number}
+                                                </button>
+                                                <button class="right font-arabic transparent" style="background-color:#eeeeee; margin-top: -5px; margin-bottom: 20px; border: none; border-radius: 10px; color:#686d76;">
+                                                    ${hasil.name.short}
+                                                </button>
+                                                <p>
+                                                    <span style="font-size: 1.4rem; font-weight:bold;">${hasil.name.transliteration.id}</span>
+                                                </p>
+                                                <p class="pt-3">
+                                                    <span style="font-size: 1rem; font-weight:300; color:#686d76;">${hasil.name.translation.id}</span>
                                                 </p>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                                 `;
-                            });
-                            surah = `
+                        });
+                        surah = `
                                 <h5 class="center">Surah yang Anda simpan</h5>
                                 <hr style="width:200px; border: solid 3px #a5a5a5; border-radius:15px 0px 15px 0px;">
                                 ${detailSurah}
                             `;
-                            document.getElementById("surahTersimpan").innerHTML = surah;
-                        }
+                        document.getElementById("surahTersimpan").innerHTML = surah;
 
                     })
                 })
@@ -175,18 +187,26 @@ const ambilSurahTersimpan = () => {
                 ambil.forEach(function (hasil) {
                     console.log(hasil);
                     detailSurah += `
-                <div class="col l4 s12 m6">
-                    <div class="card custom-shadow custom-card">
-                        <a href="./surah.html?id=${hasil.number}&saved=true" style="font-color: black;">
-                            <div class="card-content">
-                                <p>${hasil.number}. 
-                                    <span>${hasil.name.transliteration.id}</span> 
-                                    <span class="badge font-arabic" style="font-size:1.3rem;">${hasil.name.short}</span>
-                                </p>
-                            </div>
-                        </a>
+                    <div class="col l4 s12 m6">
+                        <div class="card custom-shadow custom-card">
+                            <a href="./surah.html?id=${hasil.number}&saved=true">
+                                <div class="card-content" style="margin-left:-10px; margin-right:-10px;">
+                                    <button style="background-color:#eeeeee; margin-top: -10px; margin-bottom: 20px; border: none; padding:10px; border-radius: 10px; color:#7579e7; font-weight:700;">
+                                        ${hasil.number}
+                                    </button>
+                                    <button class="right font-arabic transparent" style="background-color:#eeeeee; margin-top: -5px; margin-bottom: 20px; border: none; border-radius: 10px; color:#686d76;">
+                                        ${hasil.name.short}
+                                    </button>
+                                    <p>
+                                        <span style="font-size: 1.4rem; font-weight:bold;">${hasil.name.transliteration.id}</span>
+                                    </p>
+                                    <p class="pt-3">
+                                        <span style="font-size: 1rem; font-weight:300; color:#686d76;">${hasil.name.translation.id}</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
                 `;
                 });
                 surah = `
@@ -214,16 +234,13 @@ const ambilSurahTersimpanById = () => {
         data.data.verses.forEach(function (hasil) {
             //console.log(hasil);
             detailSurah += `
-            <div class="col l4 s12 m6">
-                <div class="card custom-shadow">
-                    <a href="./surah.html?id=${ambil.number}&saved=true" style="font-color: black;">
-                        <div class="card-content">
-                            <p>${ambil.number}. 
-                                <span>${ambil.name.transliteration.id}</span> 
-                                <span class="badge font-arabic" style="font-size:1.3rem;">${ambil.name.short}</span>
-                            </p>
-                        </div>
-                    </a>
+            <div class="card custom-shadow custom-card">
+                <a class="btn disabled text-white" style="background-color:grey; border-radius:10px 2px 2px 2px; color:#ffffff; font-weight:700;">${hasil.number.inSurah}</a>
+                <div class="card-content" style="margin-top:-10px;">
+                <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
+                    <p><i>${hasil.text.transliteration.en}</i></p>
+                    <hr>
+                    <p>${hasil.translation.id}</p>                
                 </div>
             </div>
             `;

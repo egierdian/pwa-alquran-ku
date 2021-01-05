@@ -1,3 +1,7 @@
+body {
+	background-color: #f7f7f7;
+	font-family: 'Quicksand', sans-serif;
+}
 @font-face {
 	font-family: "lpmq";
 	src: url(/css/LPMQ-IsepMisbah.ttf) format("opentype");
@@ -12,17 +16,6 @@
 	padding: 50%;
 }
 
-
-.card {
-	margin-bottom: 10px;
-	border-bottom: solid 5px;
-	border-color: #a5a5a5;
-}
-
-.page-footer {
-	padding-bottom: 10px;
-}
-
 /* custom-shadow */
 .custom-shadow {
 	box-shadow: 1px 0px 5px  rgb(173, 173, 173);
@@ -35,6 +28,7 @@
 	display: flex;
 	justify-content: center;
 	color: black;
+	box-shadow: 1px 0px 10px #cfdac8;
 }
 .sidenav-trigger {
 	padding-top:4px;
@@ -65,7 +59,7 @@
 
 /* card */
 .custom-card {
-	border-radius: 15px 2px 15px 2px;
+	border-radius: 10px;
 }
 .custom-card a{
 	text-decoration: none;
@@ -79,6 +73,7 @@
 
 /* foooter */
 .page-footer{
+	background-color: #cfdac8;
 	padding: 10px 0px;
 	text-align: center;
 }
@@ -87,5 +82,5 @@
 }
 .page-footer .custom-footer .custom-credit {
 	margin: 2px;
-	color: #e4e1e1;
+	color: #374045;
 }
