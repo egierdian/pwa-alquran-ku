@@ -112,7 +112,7 @@ const ambilSurahById = data => {
     data.data.verses.forEach(function (hasil) {
         // console.log(hasil);
         detailSurah += `
-            <div class="card custom-shadow custom-card">
+            <div class="card custom-shadow custom-card-detail">
                 <a class="btn disabled text-white" style="background-color:grey; border-radius:10px 2px 2px 2px; color:#ffffff; font-weight:700;">${hasil.number.inSurah}</a>
                 <div class="card-content" style="margin-top:-10px;">
                 <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
@@ -234,7 +234,7 @@ const ambilSurahTersimpanById = () => {
         data.data.verses.forEach(function (hasil) {
             //console.log(hasil);
             detailSurah += `
-            <div class="card custom-shadow custom-card">
+            <div class="card custom-shadow custom-card-detail">
                 <a class="btn disabled text-white" style="background-color:grey; border-radius:10px 2px 2px 2px; color:#ffffff; font-weight:700;">${hasil.number.inSurah}</a>
                 <div class="card-content" style="margin-top:-10px;">
                 <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>

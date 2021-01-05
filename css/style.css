@@ -58,6 +58,9 @@ body {
 
 
 /* card */
+.custom-card-detail {
+	border-radius: 10px;
+}
 .custom-card {
 	border-radius: 10px;
 }
@@ -73,7 +76,7 @@ body {
 
 /* foooter */
 .page-footer{
-	background-color: #cfdac8;
+	background-color: #ffffff;
 	padding: 10px 0px;
 	text-align: center;
 }
