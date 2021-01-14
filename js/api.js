@@ -117,7 +117,7 @@ const ambilSurahById = data => {
                 <div class="card-content" style="margin-top:-10px;">
                 <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
                     <p><i>${hasil.text.transliteration.en}</i></p>
-                    <hr>
+                    <hr style="color:#686d76;">
                     <p>${hasil.translation.id}</p>                
                 </div>
             </div>
@@ -239,7 +239,7 @@ const ambilSurahTersimpanById = () => {
                 <div class="card-content" style="margin-top:-10px;">
                 <p class="font-arabic" style="text-align:right; font-size:30px; padding-bottom:15px;">${hasil.text.arab}</p>
                     <p><i>${hasil.text.transliteration.en}</i></p>
-                    <hr>
+                    <hr style="color:#686d76;">
                     <p>${hasil.translation.id}</p>                
                 </div>
             </div>
