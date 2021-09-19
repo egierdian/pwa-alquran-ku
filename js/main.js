@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hapus.onclick = function () {
     M.toast({ html: 'Berhasil dihapus dari daftar tersimpan' })
+
     //console.log("button delete diklik");
     item.then(function (number) {
       deleteById(number);
