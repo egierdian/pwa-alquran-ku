@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.quran.sutanlab.id/surah/";
+const BASE_URL = "https://api.quran.gading.dev/surah/";
 
 const ENDPOINT_SURAH = `${BASE_URL}`;
 
